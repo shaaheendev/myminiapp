@@ -26,7 +26,7 @@ var btn = document.getElementById("showPopup");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function () {
+// btn.onclick = function () {
   // Basic example of showPopup with required parameters
 window.Telegram.WebApp.showPopup({
     title: "Confirmation",
@@ -45,7 +45,7 @@ window.Telegram.WebApp.showPopup({
         // Add your logic here
     }
 });
-};
+// };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
