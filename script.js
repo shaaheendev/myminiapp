@@ -27,7 +27,24 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function () {
-  Telegram.WebApp.showPopup({ title: "salam", message: "bye" });
+  // Basic example of showPopup with required parameters
+window.Telegram.WebApp.showPopup({
+    title: "Confirmation",
+    message: "Are you sure you want to proceed?",
+    buttons: [
+        { type: "ok", text: "Yes" },
+        { type: "cancel", text: "No" }
+    ]
+}, function(buttonId) {
+    // Callback function to handle user's choice
+    if (buttonId === "ok") {
+        console.log("User clicked Yes");
+        // Add your logic here
+    } else if (buttonId === "cancel") {
+        console.log("User clicked No");
+        // Add your logic here
+    }
+});
 };
 
 // When the user clicks on <span> (x), close the modal
